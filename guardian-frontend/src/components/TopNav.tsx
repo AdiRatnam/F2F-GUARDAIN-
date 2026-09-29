@@ -1,7 +1,7 @@
 import React from 'react';
 import { Search, Bell, User, Wifi, WifiOff } from 'lucide-react';
 import { useSimulation } from '../context/SimulationContext';
-import { clsx } from 'clsx';
+
 
 const TopNav: React.FC = () => {
   const { isOffline, isSyncing, shipment } = useSimulation();

@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import type { Shipment, Alert, SensorReadings } from '../types';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
+import type { Shipment } from '../types';
 import { MOCK_SHIPMENT, generateMockReadings } from '../data/mockData';
 
 interface SimulationContextType {
@@ -23,7 +24,7 @@ export const SimulationProvider: React.FC<{ children: ReactNode }> = ({ children
 
   // Simulation loop for generating offline records
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: number;
     
     if (isOffline) {
       interval = setInterval(() => {

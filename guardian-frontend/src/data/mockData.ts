@@ -1,4 +1,4 @@
-import type { Shipment, Alert, SensorReadings } from '../types';
+import type { Shipment, SensorReadings } from '../types';
 
 export const generateMockReadings = (count: number, isOffline = false, tamperedIndex = -1): SensorReadings[] => {
   const readings: SensorReadings[] = [];
